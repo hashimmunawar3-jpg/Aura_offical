@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name ="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Aura Institute & Technology</title>
+  <!-- Aos CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <!-- icon cdn-->
+  <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  <!--header-->
+  <header id="mainHeader">
+    <div class="container">
+      <div class="logo">
+        <img src="images/aura-logo.png" alt="Aura Logo">
+        
+        <strong>Aura Institute & Technology</strong>
+      </div>
+      <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul id="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#aboutSectioN" class="scrollLink">Placements</a></li>
+          <li><a href="#course-section" class="scrollLink">Courses</a></li>
+          <li><a href="#aboutSection" class="scrollLink">About Us</a></li>
+          <li><a href="#priceSection" class="scrollLink">Plans</a></li>
+          <li><a href="#" class="commonBtn">Sign Up</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section-->
+   <section class="hero">
+    <div class="hero-text" data-aos="fade-right">
+      <h1 class="heading heroHeading">Investing in <br/> Knowledge and <br/> <span> 
+      Your Future</h1>
+      <p> Join AURA Institute & Technology to master in-demand tech skills from industry 
+      experts and kickstart your dream career.</p>
+
+      <div class="stats">
+        <button class="commonBtn" style="height: 45px;">Contact</button>
+        <div>
+          <span id="courseCount">0</span>+<br/>
+          <span class="counterText">Career Courses</span>
+        </div>
+        <div>
+          <span id="studentCount">0</span>+<br/>
+          <span class="counterText">Our Students</span>
+        </div>
+        <div>
+          <span id="PlacementRate">0</span>%<br/>
+          <span class="counterText">Placement Rate</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image" data-aos="fade-left">
+      <img src="images/11.png" class="userImage">
+      <img src="images/char.png" class="heroIcon1">
+      <img src="images/activeuser.png" class="heroIcon2">
+      <div class="circle-container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div> 
+      </div>
+
+    </div>
+   </section>
+
+
+
+   <!-- course Category-->
+
+   <section class="courseSection">
+    <h1 class="heading" data-aos="zoom-in">Browse Top Essential <br/> <span>Career
+    Courses</span></h1>
+    <div class="courses" data-aos="fade-right">
+        <div class="course">
+            <i class="fa-brands fa-uikit"></i>
+            <span>Python<br/>Program</span>
+            <hr>
+        </div>
+
+        <div class="course">
+            <i class="fa-solid fa-bullhorn"></i>
+            <span>Tally Prime<br/>With GST</span>
+            <hr>
+        </div>
+
+         <div class="course">
+            <i class="fa-brands fa-code"></i>
+            <span>Web<br/>Development</span>
+            <hr>
+        </div>
+
+         <div class="course">
+            <i class="fa-brands fa-readme"></i>
+            <span>SAP<br/>Fico</span>
+            <hr> 
+        </div>
+        <div>
+            <button class="commonBtn" style="height: 45px; margin-top: 65px;  ">
+                <i class="fa-solid fa-arrow-right"></i></button>
+                <br/><br/>
+                <span class="browseAll">Browse All</span>
+            </button>
+        </div>
+    </div>
+   </section>
+
+   <!-- PLACEMENT-STUDENTS-->
+    <section id="aboutSectioN" class="aboutSectioN">
+        <div class="image-boX" data-aos="zoom-in">
+            <div class="purple-corner"></div>
+            <img src="images/CAMPUS PLACEMENT.png">
+        </div>
+        <div class="text-box" data-aos="fade-right">
+            <small>PLACEMENT-STUDENTS</small>
+            <h1 class="heading">Our Placement<br/><span>Students</span></h1>
+            <span class="highlight">Your Career Our Mission!</span>
+            <p>We proudly celebrate our students who have secured placements in reputed organizations through their hard work and industry-ready skills.</p>
+            <button class="commonBtn">READ MORE</button>
+        </div>
+    </section>
+
+   <!-- blog section-->
+    <section class="aboutSection">
+        <div class="image-box" data-aos="zoom-in">
+            <div class="purple-corner"></div>
+            <img src="images/PS1.jpeg">
+        </div>
+        <div class="text-box" data-aos="fade-lift">
+            <small>BLOGS</small>
+            <h1 class="heading">Placement<br/><span>Celebrating</span></h1>
+            <span class="highlight">Celebrating special moments:</span>
+            <p>🎂 Celebrating every achievement with sweet moments and smiling faces.
+               🤝 Cake cutting brings everyone together as one family.</p>
+            <p>📸 We capture the joy, laughter, and unforgettable memories.
+                ✨ Here, every celebration becomes a story to treasure forever!</p>
+            <button class="commonBtn">READ MORE</button>
+        </div>
+    </section>
+
+    <section class="aboutSectioN">
+        <div class="image-boX" data-aos="zoom-in">
+            <div class="purple-corner"></div>
+            <img src="images/blog2.jpeg">
+        </div>
+        <div class="text-box" data-aos="fade-right">
+            <small>Boot Camp</small>
+            <h1 class="heading">We Provide Great<br/><span>Education Institute</span></h1>
+            <span class="highlight">Creative & Professional Institute!
+                5-Day Boot Camp
+            </span>
+            <p>Hands-on learning, expert sessions, and real-world activities designed to improve skills, teamwork, and confidence — all in just 5 days!</p>
+            <button class="commonBtn">READ MORE</button>
+        </div>
+    </section>
+
+    <!-- Course card section-->
+
+    <section id="course-section" class="course-section">
+        <h1 class="heading" data-aos="zoom-in">You Can Learn Anything, <br/> Explore<span>Featured Courses</span></h1>
+        <p class="desc" data-aos="zoom-in">
+            Join AURA Institute & Technology to master in-demand tech skills from industry 
+            experts and kickstart your dream career.
+        </p>
+    <div class="courses" data-aos="fade-right">
+        <!-- card 1-->
+        <div class="course-card">
+            <img src="images/tally.png">
+            <p class="lesson">10 Lesson</p>
+            <h3>Accounting & Talily Prime with GST </h3>
+            <div class="price">
+                <span class="new">₹10999</span>
+                <span class="old">₹12999</span>
+            </div>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>5.0 Rating</span>
+            </div>
+            <div class="button">
+                <div class="Students">
+                    <i class="fa-solid fa-users"></i>956 Student
+                </div>
+                <button class="commonBtn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+
+
+
+
+
+         <!-- card 2-->
+        <div class="course-card">
+            <img src="images/saplogo.png">
+            <p class="lesson">10 Lesson</p>
+            <h3>SAP FICO</h3>
+            <div class="price">
+                <span class="new">₹29999</span>
+                <span class="old">₹33000</span>
+            </div>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>4.8 Rating</span>
+            </div>
+            <div class="button">
+                <div class="Students">
+                    <i class="fa-solid fa-users"></i>487 Student
+                </div>
+                <button class="commonBtn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+         <!-- card 3-->
+        <div class="course-card">
+            <img src="images/python-logo.png">
+            <p class="lesson">20 Lesson</p>
+            <h3>Programming For Everybody Getting Started With Python</h3>
+            <div class="price">
+                <span class="new">₹14999</span>
+                <span class="old">₹18999</span>
+            </div>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>4.7 Rating</span>
+            </div>
+            <div class="button">
+                <div class="Students">
+                    <i class="fa-solid fa-users"></i>786 Student
+                </div>
+                <button class="commonBtn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+         <!-- card 4-->
+        <div class="course-card">
+            <img src="images/fullstacklogo.png">
+            <p class="lesson">20 Lesson</p>
+            <h3>Programming For Everybody Getting Started With full Stack Developer/h3>
+            <div class="price">
+                <span class="new">₹27999</span>
+                <span class="old">₹35999</span>
+            </div>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>4.9 Rating</span>
+            </div>
+            <div class="button">
+                <div class="Students">
+                    <i class="fa-solid fa-users"></i>454 Student
+                </div>
+                <button class="commonBtn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+         <!-- card 5-->
+        <div class="course-card">
+            <img src="images/java-logo.png">
+            <p class="lesson">20 Lesson</p>
+            <h3>Programming For Everybody Getting Started With Java</h3>
+            <div class="price">
+                <span class="new">₹14999</span>
+                <span class="old">₹19999</span>
+            </div>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>4.9 Rating</span>
+            </div>
+            <div class="button">
+                <div class="Students">
+                    <i class="fa-solid fa-users"></i>876 Student
+                </div>
+                <button class="commonBtn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+         <!-- card 6-->
+        <div class="course-card">
+            <img src="images/data-science.png">
+            <p class="lesson">20 Lesson</p>
+            <h3>High Demand course in the IT DATA SCIENCE </h3>
+            <div class="price">
+                <span class="new">₹29999</span>
+                <span class="old">₹49999</span>
+            </div>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>4.9 Rating</span>
+            </div>
+            <div class="button">
+                <div class="Students">
+                    <i class="fa-solid fa-users"></i>876 Student
+                </div>
+                <button class="commonBtn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!--cta Section -->
+    <section class="cta-section">
+        <div class="cta-text" data-aos="fade-left">
+            <h2>Ready To Get Started</h2>
+            <p>We Denounce With Righteous Indignation And Dislike Men who are So Beguiled and</p>
+        </div>
+        <button class="cta-button" data-aos="fade-left">UPGRADE</button>
+    </section>
+    <!-- price section-->
+    <section id="priceSection" class="priceSection">
+        <small data-aos="zoom-in">EXCULSIVE PLANS</small>
+        <div class="heading" data-aos="zoom-in">
+            For You <span>To Choose</span>
+        </div>
+        <div class="container">
+            <div class="pricing-card " data-aos="fade-right">
+                <div class="plan-title">Basic</div>
+                <div class="plan-description">Next-Gen Accounting Course(With AI Tools)
+                </div>
+                <ul class="plan-features">
+                    <li>Manual Accounting</li>
+                    <li>Tally Prime</li>
+                    <li>Invoice Preparation</li>
+                    <li>Certificate</li>
+                </ul>
+                <div class="price">₹5,999 <span style="font-size: 0.5rem; font-weight: normal;">Month</span>
+                <br/><br/>
+                <button class="commonBtn">UPGRADE</button>
+            </div>
+            </div>
+
+            <div class="pricing-card featured" data-aos="fade-down">
+                <div class="plan-title">premium</div>
+                <div class="plan-description">Next-Gen Accounting Course(With AI Tools)
+                </div>
+                <ul class="plan-features">
+                    <li>Manual Accounting</li>
+                    <li>Tally Prime</li>
+                    <li>Invoice Preparation</li>
+                    <li>(HSN/SAC/GST)</li>
+                    <li>GSTR(GST in India)</li>
+                    <li>E-way Bill</li>
+                    <li>E-invoice</li>
+                    <li>GST Registration</li>
+                    <li>Real Time Project</li>
+                    <li>MS Office</li>
+                    <li>(Excel,Word,Powerpoint)</li>
+
+                     
+                </ul>
+                <div class="price">₹10,999 <span style="font-size: 0.5rem; font-weight: normal;">Month</span>
+                <br/><br/>
+                <button class="commonBtn">UPGRADE</button>
+            </div>
+            </div>
+
+            <div class="pricing-card" data-aos="fade-left">
+                <div class="plan-title">Standard</div>
+                <div class="plan-description">Next-Gen Accounting Course(With AI Tools)
+                </div>
+                <ul class="plan-features">
+                   <li>Manual Accounting</li>
+                    <li>Tally Prime</li>
+                    <li>Invoice Preparation</li>
+                    <li>MS Office</li>
+                    <li>(Excel,Word,Powerpoint)</li>
+                    <li>Certificate</li>
+
+                </ul>
+                <div class="price">₹8,999 <span style="font-size: 0.5rem; font-weight: normal;">Month</span>
+                <br/><br/>
+                <button class="commonBtn">UPGRADE</button>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- testimnial section -->
+     <section class="testimonialSection">
+        <small data-aos="zoom-in">Client Testimnial</small>
+        <h2 class="heading" data-aos="zoom-in"> What My <span>Client Are Saying</span></h2>
+
+        <div class="testimonial-container" data-aos="fade-right">
+            <div class="testimonial-wrapper" id="testimonialwrapper">
+                <!-- slide 1-->
+                 <div class="testimonial">
+                    <div class="top-section">
+                        <div class="images">
+                            <img src="images/user1.jpeg">
+                        </div>
+                        <div class="info">
+                            <h3>Rajeshwari</h3>
+                            <p class="position">Admin,Velammal School </p>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span style="color: #333;">5.0</span>
+                            </div>
+                            <div class="quote-icon1">"</div>
+                        </div>
+                        <p class="bottom-text">
+                           I was studied tally course in mogappair, 
+                           my trainer ilamathi mam teaching was good and friendly trainer. Thanks to Aura Institute & Technology.
+                        </p>
+                    </div>
+                 </div>
+
+                 <!-- slide 2-->
+                 <div class="testimonial">
+                    <div class="top-section">
+                        <div class="images">
+                            <img src="images/11.png">
+                        </div>
+                        <div class="info">
+                            <h3>Sandra Blake</h3>
+                            <p class="position">CEO, Digital Agency</p>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span style="color: #333;">5.0</span>
+                            </div>
+                            <div class="quote-icon1">"</div>
+                        </div>
+                        <p class="bottom-text">
+                           Join AURA Institute & Technology to master in-demand tech skills from industry
+                           experts and kickstart your dream career. 
+                        </p>
+                    </div>
+                 </div>
+
+                
+                <!-- slide 3-->
+                 <div class="testimonial">
+                    <div class="top-section">
+                        <div class="images">
+                            <img src="images/11.png">
+                        </div>
+                        <div class="info">
+                            <h3>Sandra Blake</h3>
+                            <p class="position">CEO, Digital Agency</p>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span style="color: #333;">5.0</span>
+                            </div>
+                            <div class="quote-icon1">"</div>
+                        </div>
+                        <p class="bottom-text">
+                           Join AURA Institute & Technology to master in-demand tech skills from industry
+                           experts and kickstart your dream career. 
+                        </p>
+                    </div>
+                 </div>
+
+                 <!-- slide 4-->
+                 <div class="testimonial">
+                    <div class="top-section">
+                        <div class="images">
+                            <img src="images/user1.jpeg">
+                        </div>
+                        <div class="info">
+                            <h3>Sandra Blake</h3>
+                            <p class="position">CEO, Digital Agency</p>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span style="color: #333;">5.0</span>
+                            </div>
+                            <div class="quote-icon1">"</div>
+                        </div>
+                        <p class="bottom-text">
+                           Join AURA Institute & Technology to master in-demand tech skills from industry
+                           experts and kickstart your dream career. 
+                        </p>
+                    </div>
+                 </div>
+
+
+                  
+            </div>
+            <div class="dots">
+                <span class="dot active" onclick="moveToSlide(0)"></span>
+                <span class="dot" onclick="moveToSlide(1)"></span>
+                 
+            </div>
+        </div>
+     </section>
+     <!-- instruction section-->
+    <section class="instructor-section">
+        <div class="instructor-container">
+            <div class="instructor-image" data-aos="fade-right">
+                <img src="images/11.png">
+            </div>
+            <div class="instructor-content" data-aos="fade-left">
+                <h1 class="heading">Become An <span>Instructor</span></h1>
+                <p> Join AURA Institute & Technology to master in-demand tech skills from industry
+                experts and kickstart your dream career. </p>
+                <a class="commonBtn">Start Teaching Today</a>
+            </div>
+        </div>
+    </section>
+
+    <button id ="backToTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- ======= Faculty Section ======= -->
+    <section  class="faculty-section">
+        <h1 class="headings" data-aos="zoom-in">Meet Our,<br/>Expert<span> Faculty</span></h1>
+        <p class="desC" data-aos="zoom-in">
+            Learn from industry professionals with years of practical experience.
+              
+        </p>
+    <div class="courseS" data-aos="fade-right">
+     <!-- card 3-->
+        <div class="course-carD">
+            <img src="images/11.png">
+            <h1 class="headingS" data-aos="zoom-in">Pavithra <br/><span> </span></h1>
+            <p class="lessoN">Director</p>
+             
+             
+            <div class="button">
+                 
+                <button class="commonBtn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+         
+
+        <div class="course-carD">
+            <img src="images/11.png">
+            <h1 class="headingS" data-aos="zoom-in">Subhashini <br/><span> </span></h1>
+            <p class="lessoN">Academic Counselor</p>
+             
+             
+            <div class="button">
+                 
+                <button class="commonBtn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <div class="course-carD">
+            <img src="images/11.png">
+            <h1 class="headingS" data-aos="zoom-in">Ilamathi V <br/><span> </span></h1>
+            <p class="lessoN">Accounting Trainer</p>
+             
+             
+            <div class="button">
+                 
+                <button class="commonBtn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <div class="course-carD">
+            <img src="images/11.png">
+            <h1 class="headingS" data-aos="zoom-in">Radha N<br/><span> </span></h1>
+            <p class="lessoN">SAP Trainer</p>
+            
+             
+            <div class="button">
+                 
+                <button class="commonBtn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <div class="course-carD">
+            <img src="images/11.png">
+            <h1 class="headingS" data-aos="zoom-in">JD </h1>
+            <p class="lessoN">Software Trainer</p>
+             
+            <div class="button">
+                 
+                <button class="commonBtn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- about section-->
+    <section  id="aboutSection" class="aboutSection">
+        <div class="image-box" data-aos="zoom-in">
+            <div class="purple-corner"></div>
+            <img src="images/aboutlogo.jpeg">
+        </div>
+        <div class="text-box" data-aos="fade-right">
+            <small>ABOUT US</small>
+            <h1 class="heading">We Provide Great<br/><span>Education Platform</span></h1>
+            <span class="highlight">Creative & Professional Institute!</span>
+            <p>AURA Institute & Technology is a premier educational institution dedicated to providing cutting-edge technology education since 2012.</p>
+            <p>Our mission is to bridge the gap between academic learning and industry requirements by offering practical, hands-on training in the most in-demand technologies.</p>
+            <button class="commonBtn">READ MORE</button>
+        </div>
+    </section>
+
+     
+
+    <!-- footer-->
+     <footer>
+        <div class="newsletter">
+            <h2>Join Now</h2>
+            <p>Empowering the next generation of tech professionals through quality education and practical training.
+
+</p>
+            <div class="form-container">
+                <input type="email" placeholder="Email Address..."> 
+                <button class="cta-button">SUBSCRIBE NOW</button>           
+         </div>
+        </div>
+
+        <!-- footer bottom-->
+        <div class="footer-bottom">
+            <div class="footer-logo">
+                <i class="fa-solid fa-graduation-cap"></i><strong>AURA Institute & Technology</strong>
+            </div>
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Services</a>
+                <a href="#">Page</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact Us</a>
+            </div>
+             
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            copyright @ 2025 <a href="#" style="color: var(--secondary-color);
+             text-decoration: none;">Aura Institute & Technology</a>.All right reserved
+        </div>
+     </footer>
+
+
+  <!-- aos js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- custom js-->
+  <script src="js/custom.js"></script>
+</body>
+</html>
