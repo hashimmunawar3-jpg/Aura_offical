@@ -14,7 +14,7 @@
     font-family: "Poppins", sans-serif;
 }
 body{
-    background:linear-gradient(180deg,#d8d8dd1f,#9e92f50f);
+    background:linear-gradient(180deg,#fffffffa,#462fee0f);
     color:var(--text-dark);
     overflow-x: hidden;
 }
@@ -1569,7 +1569,7 @@ footer{
     }
     
     body {
-        color: black;
+        color: rgb(0, 0, 0);
         background: white !important;
     }
     

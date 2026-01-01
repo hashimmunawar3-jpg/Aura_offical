@@ -76,3 +76,47 @@ document.querySelectorAll('.scrollLink').forEach(link => {
         document.getElementById('menu').classList.remove('active');
     });
 });
+ // Get the button
+        const backToTopBtn = document.getElementById("backToTop");
+        
+        // Show/hide the button based on scroll position
+        window.addEventListener("scroll", function() {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.style.display = "flex";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        });
+        
+        // Smooth scroll to top when button is clicked
+        backToTopBtn.addEventListener("click", function(e) {
+            e.preventDefault();
+            
+            // Using requestAnimationFrame for smooth animation
+            const scrollToTop = () => {
+                const currentPosition = window.pageYOffset;
+                
+                if (currentPosition > 0) {
+                    // Scroll up by a fraction of the current position
+                    window.scrollTo(0, currentPosition - currentPosition / 1);
+                    requestAnimationFrame(scrollToTop);
+                }
+            };
+            
+            // Alternative: Using scrollTo with behavior smooth (modern browsers)
+            // window.scrollTo({
+            //     top: 0,
+            //     behavior: 'smooth'
+            // });
+            
+            // Using the custom animation
+            scrollToTop();
+        });
+        
+        // Alternative simpler implementation with smooth scroll
+        // backToTopBtn.addEventListener("click", function() {
+        //     window.scrollTo({
+        //         top: 0,
+        //         behavior: 'smooth'
+        //     });
+        // });

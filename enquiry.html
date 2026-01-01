@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA Institute & Technology - Student Enquiry Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2980, #26d0ce);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+        }
+        
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .form-container {
+            display: flex;
+            flex-wrap: wrap;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .form-side {
+            flex: 1;
+            min-width: 300px;
+            padding: 40px;
+            background: #f8f9fa;
+        }
+        
+        .info-side {
+            flex: 1;
+            min-width: 300px;
+            padding: 40px;
+            background: linear-gradient(to bottom right, #2c3e50, #1a2980);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .required::after {
+            content: " *";
+            color: #e74c3c;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+        
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 8px;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 8px;
+        }
+        
+        button {
+            background: linear-gradient(to right, #3498db, #1a2980);
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background: linear-gradient(to right, #2980b9, #1a237e);
+            transform: translateY(-3px);
+            box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+        }
+        
+        button:active {
+            transform: translateY(-1px);
+        }
+        
+        .info-side h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        
+        .info-side ul {
+            list-style-type: none;
+            margin-bottom: 30px;
+        }
+        
+        .info-side li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .info-side li i {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            color: #3498db;
+        }
+        
+        .contact-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .error {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .success-message {
+            display: none;
+            background: #2ecc71;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .course-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .course-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #f1f8ff;
+            padding: 10px;
+            border-radius: 6px;
+        }
+        
+        @media (max-width: 768px) {
+            .form-container {
+                flex-direction: column;
+            }
+            
+            header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .form-side, .info-side {
+                padding: 30px;
+            }
+        }
+        
+        .form-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .form-header i {
+            font-size: 2.5rem;
+            color: #1a2980;
+        }
+        
+        .form-header h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+        }
+
+        .flash-messages {
+            width: 100%;
+            max-width: 900px;
+            margin-bottom: 20px;
+        }
+
+        .flash-message {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .flash-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .flash-warning {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flash-messages">
+            <!-- Flash messages will appear here -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="flash-message flash-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+
+        <header>
+            <h1><i class="fas fa-laptop-code"></i> AURA Institute & Technology</h1>
+            <p>Fill out the enquiry form below and our team will contact you within 24 hours to guide you about our courses and programs.</p>
+        </header>
+        
+        <div class="form-container">
+            <div class="form-side">
+                <div class="form-header">
+                    <i class="fas fa-file-alt"></i>
+                    <h2>Student Enquiry Form</h2>
+                </div>
+                
+                <form id="enquiryForm" method="POST" action="/">
+                    <div class="form-group">
+                        <label for="fullName" class="required">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                        <div class="error" id="nameError">Please enter your full name</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="required">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        <div class="error" id="emailError">Please enter a valid email address</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="required">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                        <div class="error" id="phoneError">Please enter a valid phone number</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" min="10" max="60" placeholder="Enter your age">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="required">Gender</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="male" name="gender" value="Male">
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="female" name="gender" value="Female">
+                                <label for="female">Female</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="other" name="gender" value="Other">
+                                <label for="other">Other</label>
+                            </div>
+                        </div>
+                        <div class="error" id="genderError">Please select your gender</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="education" class="required">Highest Education</label>
+                        <select id="education" name="education" required>
+                            <option value="">Select your education level</option>
+                            <option value="High School">High School</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Bachelor's Degree">Bachelor's Degree</option>
+                            <option value="Master's Degree">Master's Degree</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <div class="error" id="educationError">Please select your education level</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="required">Interested Courses</label>
+                        <div class="course-options">
+                            <div class="course-checkbox">
+                                <input type="checkbox" id="fullStack" name="courses" value="Full Stack Developer">
+                                <label for="fullStack">Full Stack Developer</label>
+                            </div>
+                            <div class="course-checkbox">
+                                <input type="checkbox" id="sapFico" name="courses" value="SAP FICO">
+                                <label for="sapFico">SAP FICO</label>
+                            </div>
+                            <div class="course-checkbox">
+                                <input type="checkbox" id="python" name="courses" value="Python">
+                                <label for="python">Python</label>
+                            </div>
+                            <div class="course-checkbox">
+                                <input type="checkbox" id="tally" name="courses" value="Tally With GST">
+                                <label for="tally">Tally With GST</label>
+                            </div>
+                            <div class="course-checkbox">
+                                <input type="checkbox" id="graphicDesign" name="courses" value="Graphic Design">
+                                <label for="graphicDesign">Graphic Design</label>
+                            </div>
+                            <div class="course-checkbox">
+                                <input type="checkbox" id="digitalMarketing" name="courses" value="Digital Marketing">
+                                <label for="digitalMarketing">Digital Marketing</label>
+                            </div>
+                            <div class="course-checkbox">
+                                <input type="checkbox" id="msOffice" name="courses" value="MS Office">
+                                <label for="msOffice">MS Office</label>
+                            </div>
+                            <div class="course-checkbox">
+                                <input type="checkbox" id="dataScience" name="courses" value="Data Science & ML">
+                                <label for="dataScience">Data Science & ML</label>
+                            </div>
+                        </div>
+                        <div class="error" id="courseError">Please select at least one course</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Additional Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Any specific questions or requirements..."></textarea>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Subscribe to our newsletter for updates on new courses and offers</label>
+                    </div>
+                    
+                    <button type="submit" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i> Submit Enquiry
+                    </button>
+                </form>
+                
+                <div class="success-message" id="successMessage">
+                    <h3><i class="fas fa-check-circle"></i> Thank You!</h3>
+                    <p>Your enquiry has been submitted successfully. We will contact you within 24 hours.</p>
+                </div>
+            </div>
+            
+            <div class="info-side">
+                <h2>Why Choose Our Center?</h2>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Experienced and Certified Instructors</li>
+                    <li><i class="fas fa-check-circle"></i> Hands-on Practical Training</li>
+                    <li><i class="fas fa-check-circle"></i> Industry-Recognized Certifications</li>
+                    <li><i class="fas fa-check-circle"></i> Flexible Batch Timings</li>
+                    <li><i class="fas fa-check-circle"></i> Modern Computer Lab with Latest Software</li>
+                    <li><i class="fas fa-check-circle"></i> Placement Assistance for Eligible Students</li>
+                    <li><i class="fas fa-check-circle"></i> Affordable Fees with Installment Options</li>
+                </ul>
+                
+                <div class="contact-info">
+                    <h3><i class="fas fa-info-circle"></i> Contact Information</h3>
+                    <p><i class="fas fa-map-marker-alt"></i>  3/2, 1st Floor, Round Building, Anna Nagar West Extension, Chennai - 600101 (Near Collector Nagar Bus Stand)</p>
+                    <p><i class="fas fa-phone"></i> +91 733 904 4193</p>
+                    <p><i class="fas fa-envelope"></i>aurainstitutetechnology@gmail.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 9:30 AM - 7:30 PM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('enquiryForm');
+            const successMessage = document.getElementById('successMessage');
+            
+            // Get all error elements
+            const nameError = document.getElementById('nameError');
+            const emailError = document.getElementById('emailError');
+            const phoneError = document.getElementById('phoneError');
+            const genderError = document.getElementById('genderError');
+            const educationError = document.getElementById('educationError');
+            const courseError = document.getElementById('courseError');
+            
+            // Form validation function
+            function validateForm() {
+                let isValid = true;
+                
+                // Reset errors
+                nameError.style.display = 'none';
+                emailError.style.display = 'none';
+                phoneError.style.display = 'none';
+                genderError.style.display = 'none';
+                educationError.style.display = 'none';
+                courseError.style.display = 'none';
+                
+                // Validate full name
+                const fullName = document.getElementById('fullName').value.trim();
+                if (fullName === '') {
+                    nameError.style.display = 'block';
+                    isValid = false;
+                }
+                
+                // Validate email
+                const email = document.getElementById('email').value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    emailError.style.display = 'block';
+                    isValid = false;
+                }
+                
+                // Validate phone
+                const phone = document.getElementById('phone').value.trim();
+                const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+                if (!phoneRegex.test(phone.replace(/\D/g, '')) || phone === '') {
+                    phoneError.style.display = 'block';
+                    isValid = false;
+                }
+                
+                // Validate gender
+                const genderSelected = document.querySelector('input[name="gender"]:checked');
+                if (!genderSelected) {
+                    genderError.style.display = 'block';
+                    isValid = false;
+                }
+                
+                // Validate education
+                const education = document.getElementById('education').value;
+                if (education === '') {
+                    educationError.style.display = 'block';
+                    isValid = false;
+                }
+                
+                // Validate courses
+                const coursesSelected = document.querySelectorAll('input[name="courses"]:checked');
+                if (coursesSelected.length === 0) {
+                    courseError.style.display = 'block';
+                    isValid = false;
+                }
+                
+                return isValid;
+            }
+            
+            // Form submission handler
+            form.addEventListener('submit', function(e) {
+                if (!validateForm()) {
+                    e.preventDefault();
+                }
+            });
+            
+            // Real-time validation for some fields
+            document.getElementById('fullName').addEventListener('blur', function() {
+                if (this.value.trim() === '') {
+                    nameError.style.display = 'block';
+                } else {
+                    nameError.style.display = 'none';
+                }
+            });
+            
+            document.getElementById('email').addEventListener('blur', function() {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(this.value.trim())) {
+                    emailError.style.display = 'block';
+                } else {
+                    emailError.style.display = 'none';
+                }
+            });
+            
+            document.getElementById('phone').addEventListener('blur', function() {
+                const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+                const phoneValue = this.value.trim().replace(/\D/g, '');
+                if (!phoneRegex.test(phoneValue) || phoneValue === '') {
+                    phoneError.style.display = 'block';
+                } else {
+                    phoneError.style.display = 'none';
+                }
+            });
+            
+            // Format phone number as user types
+            document.getElementById('phone').addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length > 0) {
+                    if (value.length <= 3) {
+                        value = value;
+                    } else if (value.length <= 6) {
+                        value = `(${value.substring(0,3)}) ${value.substring(3)}`;
+                    } else {
+                        value = `(${value.substring(0,3)}) ${value.substring(3,6)}-${value.substring(6,10)}`;
+                    }
+                }
+                e.target.value = value;
+            });
+        });
+    </script>
+</body>
+</html>
