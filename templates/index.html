@@ -8,15 +8,14 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <!-- icon cdn-->
   <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
-
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
   <!--header-->
   <header id="mainHeader">
     <div class="container">
       <div class="logo">
-        <img src="images/aura-logo.png" alt="Aura Logo">
+        <img src="{{ url_for('static', filename='images/aura-logo.png') }}" alt="Aura Logo">
         
         <strong>Aura Institute & Technology</strong>
       </div>
@@ -64,9 +63,9 @@
       </div>
     </div>
     <div class="hero-image" data-aos="fade-left">
-      <img src="images/11.png" class="userImage">
-      <img src="images/char.png" class="heroIcon1">
-      <img src="images/activeuser.png" class="heroIcon2">
+      <img src="{{ url_for('static', filename='images/11.png') }}" class="userImage">
+      <img src="{{ url_for('static', filename='images/char.png') }}" class="heroIcon1">
+      <img src="{{ url_for('static', filename='images/activeuser.png') }}" class="heroIcon2">
       <div class="circle-container">
         <div class="circle"></div>
         <div class="circle"></div>
@@ -112,12 +111,16 @@
             <hr> 
         </div>
         <div>
-            <a href="enquiry.html" class="browseLink"> 
-            <button class="commonBtn" style="height: 45px; margin-top: 65px;  ">
-                <i class="fa-solid fa-arrow-right"></i></button>
+            <a href="{{ url_for('enquiry') }}" class="browseLink"> 
+                <button class="commonBtn" style="height: 45px; margin-top: 65px;  ">
+                <i class="fa-solid fa-arrow-right"></i>
+                </button>
                 <br/><br/>
                 <span class="browseAll">Browse All</span>
                  
+             
+            </a>
+        </div>
             </button>
             </a>
         </div>
@@ -129,7 +132,7 @@
     <section id="aboutSectioN" class="aboutSectioN">
         <div class="image-boX" data-aos="zoom-in">
             <div class="purple-corner"></div>
-            <img src="images/CAMPUS PLACEMENT.png">
+            <img src="{{ url_for('static', filename='images/CAMPUS PLACEMENT.png') }}">
         </div>
         <div class="text-box" data-aos="fade-right">
             <small>PLACEMENT-STUDENTS</small>
@@ -144,7 +147,8 @@
     <section class="aboutSection">
         <div class="image-box" data-aos="zoom-in">
             <div class="purple-corner"></div>
-            <img src="images/PS1.jpeg">
+            <img src="{{ url_for('static', filename='images/PS1.jpeg') }}">
+           
         </div>
         <div class="text-box" data-aos="fade-lift">
             <small>BLOGS</small>
@@ -161,7 +165,7 @@
     <section class="aboutSectioN">
         <div class="image-boX" data-aos="zoom-in">
             <div class="purple-corner"></div>
-            <img src="images/blog2.jpeg">
+            <img src="{{ url_for('static', filename='images/blog2.jpeg') }}">
         </div>
         <div class="text-box" data-aos="fade-right">
             <small>Boot Camp</small>
@@ -185,7 +189,7 @@
     <div class="courses" data-aos="fade-right">
         <!-- card 1-->
         <div class="course-card">
-            <img src="images/tally.png">
+            <img src="{{ url_for('static', filename='images/tally.png') }}">
             <p class="lesson">10 Lesson</p>
             <h3>Accounting & Talily Prime with GST </h3>
             <div class="price">
@@ -203,7 +207,7 @@
                 <div class="Students">
                     <i class="fa-solid fa-users"></i>956 Student
                 </div>
-                <a href="enquiry.html" class="browseLink"> 
+                <a href="{{ url_for('enquiry') }}" class="browseLink">
                 <button class="commonBtn"><i class="fa-solid fa-arrow-right"></i></button>
                 </a>
             </div>
@@ -216,7 +220,7 @@
 
          <!-- card 2-->
         <div class="course-card">
-            <img src="images/saplogo.png">
+            <img src="{{ url_for('static', filename='images/saplogo.png') }}">
             <p class="lesson">10 Lesson</p>
             <h3>SAP FICO</h3>
             <div class="price">
@@ -234,14 +238,14 @@
                 <div class="Students">
                     <i class="fa-solid fa-users"></i>487 Student
                 </div>
-                <a href="enquiry.html" class="browseLink"> 
+                <a href="{{ url_for('enquiry') }}" class="browseLink">
                 <button class="commonBtn"><i class="fa-solid fa-arrow-right"></i></button>
                 </a>
             </div>
         </div>
          <!-- card 3-->
         <div class="course-card">
-            <img src="images/python-logo.png">
+            <img src="{{ url_for('static', filename='images/python-logo.png') }}">
             <p class="lesson">20 Lesson</p>
             <h3>Programming For Everybody Getting Started With Python</h3>
             <div class="price">
@@ -259,7 +263,7 @@
                 <div class="Students">
                     <i class="fa-solid fa-users"></i>786 Student
                 </div>
-                <a href="enquiry.html" class="browseLink"> 
+                <a href="{{ url_for('enquiry') }}" class="browseLink">
                 <button class="commonBtn"><i class="fa-solid fa-arrow-right"></i></button>
                 </a>
             </div>
@@ -267,7 +271,7 @@
 
          <!-- card 4-->
         <div class="course-card">
-            <img src="images/fullstacklogo.png">
+            <img src="{{ url_for('static', filename='images/fullstacklogo.png') }}">
             <p class="lesson">20 Lesson</p>
             <h3>Programming For Everybody Getting Started With full Stack Developer/h3>
             <div class="price">
@@ -285,7 +289,7 @@
                 <div class="Students">
                     <i class="fa-solid fa-users"></i>454 Student
                 </div>
-                <a href="enquiry.html" class="browseLink"> 
+                <a href="{{ url_for('enquiry') }}" class="browseLink"> 
                 <button class="commonBtn"><i class="fa-solid fa-arrow-right"></i></button>
                 </a>
             </div>
@@ -293,7 +297,7 @@
 
          <!-- card 5-->
         <div class="course-card">
-            <img src="images/java-logo.png">
+            <img src="{{ url_for('static', filename='images/java-logo.png') }}">
             <p class="lesson">20 Lesson</p>
             <h3>Programming For Everybody Getting Started With Java</h3>
             <div class="price">
@@ -311,7 +315,7 @@
                 <div class="Students">
                     <i class="fa-solid fa-users"></i>876 Student
                 </div>
-                <a href="enquiry.html" class="browseLink"> 
+                <a href="{{ url_for('enquiry') }}" class="browseLink"> 
                 <button class="commonBtn"><i class="fa-solid fa-arrow-right"></i></button>
                 </a>
             </div>
@@ -319,7 +323,7 @@
 
          <!-- card 6-->
         <div class="course-card">
-            <img src="images/data-science.png">
+            <img src="{{ url_for('static', filename='images/data-science.png') }}">
             <p class="lesson">20 Lesson</p>
             <h3>High Demand course in the IT DATA SCIENCE </h3>
             <div class="price">
@@ -337,7 +341,7 @@
                 <div class="Students">
                     <i class="fa-solid fa-users"></i>876 Student
                 </div>
-                <a href="enquiry.html" class="browseLink"> 
+                <a href="{{ url_for('enquiry') }}" class="browseLink"> 
                 <button class="commonBtn"><i class="fa-solid fa-arrow-right"></i></button>
                 </a>
             </div>
@@ -371,7 +375,7 @@
                 </ul>
                 <div class="price">₹5,999 <span style="font-size: 0.5rem; font-weight: normal;">Month</span>
                 <br/><br/>
-                <a href="enquiry.html" class="browseLink"> 
+                <a href="{{ url_for('enquiry') }}" class="browseLink"> 
                 <button class="commonBtn">UPGRADE</button>
                 </a>
             </div>
@@ -398,7 +402,7 @@
                 </ul>
                 <div class="price">₹10,999 <span style="font-size: 0.5rem; font-weight: normal;">Month</span>
                 <br/><br/>
-                <a href="enquiry.html" class="browseLink"> 
+                <a href="{{ url_for('enquiry') }}" class="browseLink"> 
                 <button class="commonBtn">UPGRADE</button>
                 </a>
             </div>
@@ -419,7 +423,7 @@
                 </ul>
                 <div class="price">₹8,999 <span style="font-size: 0.5rem; font-weight: normal;">Month</span>
                 <br/><br/>
-                <a href="enquiry.html" class="browseLink"> 
+                <a href="{{ url_for('enquiry') }}" class="browseLink"> 
                 <button class="commonBtn">UPGRADE</button>
                 </a>
             </div>
@@ -438,7 +442,8 @@
                  <div class="testimonial">
                     <div class="top-section">
                         <div class="images">
-                            <img src="images/user1.jpeg">
+                            <img src="{{ url_for('static', filename='images/user1.jpeg') }}">
+
                         </div>
                         <div class="info">
                             <h3>Rajeshwari</h3>
@@ -464,7 +469,7 @@
                  <div class="testimonial">
                     <div class="top-section">
                         <div class="images">
-                            <img src="images/11.png">
+                            <img src="{{ url_for('static', filename='images/user1.jpeg') }}">
                         </div>
                         <div class="info">
                             <h3>Sandra Blake</h3>
@@ -491,7 +496,7 @@
                  <div class="testimonial">
                     <div class="top-section">
                         <div class="images">
-                            <img src="images/11.png">
+                            <img src="{{ url_for('static', filename='images/user1.jpeg') }}">
                         </div>
                         <div class="info">
                             <h3>Sandra Blake</h3>
@@ -517,7 +522,7 @@
                  <div class="testimonial">
                     <div class="top-section">
                         <div class="images">
-                            <img src="images/user1.jpeg">
+                        <img src="{{ url_for('static', filename='images/user1.jpeg') }}">
                         </div>
                         <div class="info">
                             <h3>Sandra Blake</h3>
@@ -553,7 +558,7 @@
     <section class="instructor-section">
         <div class="instructor-container">
             <div class="instructor-image" data-aos="fade-right">
-                <img src="images/11.png">
+                <img src="{{ url_for('static', filename='images/11.png') }}">
             </div>
             <div class="instructor-content" data-aos="fade-left">
                 <h1 class="heading">Become An <span>Instructor</span></h1>
@@ -578,7 +583,7 @@
     <div class="courseS" data-aos="fade-right">
      <!-- card 3-->
         <div class="course-carD">
-            <img src="images/11.png">
+            <img src="{{ url_for('static', filename='images/11.png') }}">
             <h1 class="headingS" data-aos="zoom-in">Pavithra <br/><span> </span></h1>
             <p class="lessoN">Director</p>
              
@@ -591,7 +596,7 @@
          
 
         <div class="course-carD">
-            <img src="images/11.png">
+            <img src="{{ url_for('static', filename='images/11.png') }}">
             <h1 class="headingS" data-aos="zoom-in">Subhashini <br/><span> </span></h1>
             <p class="lessoN">Academic Counselor</p>
              
@@ -603,7 +608,7 @@
         </div>
 
         <div class="course-carD">
-            <img src="images/11.png">
+            <img src="{{ url_for('static', filename='images/11.png') }}">
             <h1 class="headingS" data-aos="zoom-in">Ilamathi V <br/><span> </span></h1>
             <p class="lessoN">Accounting Trainer</p>
              
@@ -615,7 +620,7 @@
         </div>
 
         <div class="course-carD">
-            <img src="images/11.png">
+            <img src="{{ url_for('static', filename='images/11.png') }}">
             <h1 class="headingS" data-aos="zoom-in">Radha N<br/><span> </span></h1>
             <p class="lessoN">SAP Trainer</p>
             
@@ -627,7 +632,7 @@
         </div>
 
         <div class="course-carD">
-            <img src="images/11.png">
+            <img src="{{ url_for('static', filename='images/11.png') }}">
             <h1 class="headingS" data-aos="zoom-in">JD </h1>
             <p class="lessoN">Software Trainer</p>
              
@@ -643,7 +648,8 @@
     <section  id="aboutSection" class="aboutSection">
         <div class="image-box" data-aos="zoom-in">
             <div class="purple-corner"></div>
-            <img src="images/aboutlogo.jpeg">
+            <img src="{{ url_for('static', filename='images/aboutlogo.jpeg') }}">
+             
         </div>
         <div class="text-box" data-aos="fade-right">
             <small>ABOUT US</small>
@@ -712,6 +718,6 @@
     AOS.init();
   </script>
   <!-- custom js-->
-  <script src="js/custom.js"></script>
+  <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
 </body>
 </html>
